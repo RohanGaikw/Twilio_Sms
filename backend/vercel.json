@@ -1,16 +1,22 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "server.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "server.js"
-      }
-    ]
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server.js"
+    }
+  ],
+  "env": {
+    "MONGO_URI": "@MONGO_URI",
+    "TWILIO_SID": "@TWILIO_SID",
+    "TWILIO_AUTH_TOKEN": "@TWILIO_AUTH_TOKEN",
+    "TWILIO_PHONE_NUMBER": "@TWILIO_PHONE_NUMBER",
+    "FRONTEND_URL": "@FRONTEND_URL"
   }
-  
+}
